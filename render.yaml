@@ -3,8 +3,8 @@ services:
     name: recipe-rover
     env: python
     plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn src.app:app
+    buildCommand: cd recipe-rover && pip install -r requirements.txt
+    startCommand: cd recipe-rover/src && gunicorn app:app
     envVars:
       - key: PORT
         value: 8000
