@@ -1,12 +1,14 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Ensuring the layout is centered */
+    flex-direction: column;
+    text-align: center; /* Center text globally */
 }
 
 .hero-banner {
@@ -14,21 +16,21 @@ body {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 100%;
+    height: 100%; /* Full height for the hero banner */
     color: rgb(6, 6, 6);
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     position: relative;
+    padding: 60px 20px; /* Adjust padding to ensure the text doesn't get cut off */
 }
 
 .heading-text {
     font-family: 'Calibri', sans-serif, 'Utahlic', sans-serif;
     font-size: 4rem;
-    color: #000; /* Black text */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6), 0px 0px 5px rgba(128, 128, 128, 0.6); /* Black and gray text shadow */
-    margin-bottom: 50px; /* Reduce the margin */
+    color: #000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6), 0px 0px 5px rgba(128, 128, 128, 0.6);
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -43,7 +45,7 @@ body {
 
 .container {
     position: absolute;
-    top: 50%; /* Center the content vertically */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -215,34 +217,26 @@ main {
 /* Mobile responsive styles */
 @media (max-width: 768px) {
     body {
-        height: auto;
-        display: block; /* Adjust for mobile */
+        height: 100vh; /* Full height of the viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* Ensure text is centered */
     }
 
     .hero-banner {
-        padding: 40px 20px;
-        height: auto; /* Allow height to adjust with content */
+        height: 100vh; /* Full height for mobile */
+        padding: 20px; /* Adjust padding for smaller screens */
     }
 
     .heading-text {
         font-size: 2.5rem; /* Smaller font size on mobile */
-        margin-bottom: 20px; /* Reduce the bottom margin */
-    }
-
-    .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-    }
-
-    .hero-banner-wrapper {
-        height: auto; /* Adjust the height of the overlay */
+        margin-bottom: 20px; /* Reduce margin */
     }
 
     .recipe {
-        width: 45%; /* Adjust recipe card size */
+        width: 80%; /* Increase the width of the recipe cards for mobile */
+        margin: 10px 0; /* Add margin between recipe cards */
     }
 
     .recipe h2 {
