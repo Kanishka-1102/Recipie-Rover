@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Rover</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@100;400&family=Cabin:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero-banner">
+        <div class="hero-banner-wrapper">
+            <div class="container">
+                <h1 class="heading-text">Recipe Rover</h1>
+                <h4>From pantry to plate, your wish is our command! 🥘🔍</h4>
+                <p>Enter your ingredients to discover delicious recipes based on what you have in your kitchen. Get inspired and start cooking today!</p>
+                <form method="post">
+                    <label for="ingredients">Enter your ingredients (comma-separated):</label><br>
+                    <input type="text" id="ingredients" name="ingredients" required><br>
+                    <input type="submit" value="Get Recipes" onclick="showLoader()">
+                </form>
+                <div class="loader">
+                    <img src="https://i.gifer.com/4V0V.gif" alt="loading">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showLoader() {
+            document.querySelector('.loader').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
